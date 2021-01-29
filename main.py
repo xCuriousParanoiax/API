@@ -8,6 +8,17 @@ from pydantic import BaseModel
 import cv2
 import numpy as np
 
+
+#TODO:
+
+# Add:
+	# Exception handling for different types (extensions) of images.
+	# Exception handling for files that aren't images.
+	# Exception handling for images of different shapes.
+	# Image rotation to make sure that both images have the same side up (if they are the same image):
+		# You can do this by rotating the images until the lightest color portion of each image is at the top, left or right, hand side of the image.
+
+
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
 
