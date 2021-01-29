@@ -12,6 +12,7 @@ opencv-python = "*"
 python-multipart = "*"
 numpy = "*"
 pydantic = "*"
+requests = "*"
 
 [dev-packages]
 
