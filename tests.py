@@ -2,13 +2,17 @@ import json
 import requests
 
 
+imgOnePath = "img.jpg"
+imgTwoPath = "img3.jpg"
+
+
 # Step 1
 
 # We try comparing files before logging in and we get "Not authenticated":
 
 files = {
-    'file1': ('img.jpeg', open('img.jpeg', 'rb')),
-    'file2': ('img3.jpeg', open('img3.jpeg', 'rb')),
+    'file1': (imgOnePath, open(imgOnePath, 'rb')),
+    'file2': (imgTwoPath, open(imgTwoPath, 'rb')),
 }
 
 compare_response = requests.post('http://localhost:8000/compare/', files=files)
@@ -36,8 +40,8 @@ data = {
 }
 
 files = {
-    'file1': ('img.jpeg', open('img.jpeg', 'rb')),
-    'file2': ('img3.jpeg', open('img3.jpeg', 'rb')),
+    'file1': (imgOnePath, open(imgOnePath, 'rb')),
+    'file2': (imgTwoPath, open(imgTwoPath, 'rb')),
 }
 
 login_response = requests.post('http://localhost:8000/token/', data=data)
@@ -77,8 +81,8 @@ headers = {
 }
 
 files = {
-    'file1': ('img.jpeg', open('img.jpeg', 'rb')),
-    'file2': ('img3.jpeg', open('img3.jpeg', 'rb')),
+    'file1': (imgOnePath, open(imgOnePath, 'rb')),
+    'file2': (imgTwoPath, open(imgTwoPath, 'rb')),
 }
 
 compare_response = requests.post('http://localhost:8000/compare/', headers=headers, files=files)
@@ -107,8 +111,8 @@ headers = {
 }
 
 files = {
-    'file1': ('img.jpeg', open('img.jpeg', 'rb')),
-    'file2': ('img3.jpeg', open('img3.jpeg', 'rb')),
+    'file1': (imgOnePath, open(imgOnePath, 'rb')),
+    'file2': (imgTwoPath, open(imgTwoPath, 'rb')),
 }
 
 compare_response = requests.post('http://localhost:8000/compare/', headers=headers, files=files)
